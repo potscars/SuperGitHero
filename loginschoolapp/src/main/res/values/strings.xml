@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">SchoolApp</string>
+
+  <string name="message">SEREMBAN: Mahkamah Tinggi hari ini, menolak permohonan Malaysiakini supaya Hakim Datuk Kamaludin Md Said, menarik diri daripada mendengar saman fitnah membabitkan portal itu dan Presiden UMNO.
+
+Kamaludin yang membuat keputusan itu di dalam kamarnya turut memerintahkan Malaysiakini membayar kos RM5,000 kepada plaintif.
+
+Saman itu difailkan oleh Datuk Seri Najib Razak dan Setiausaha Kerja UMNO, Datuk Seri Ab Rauf Yusoh terhadap Mkini Dotcom Sdn Bhd; Ketua Editor Malaysiakini, Steven Gan dan Ketua Pengarang, Fathi Aris Omar, berhubung penerbitan dua artikel.
+
+Defendan membuat permohonan supaya Kamaludin yang sebelum ini adalah Pesuruhjaya Kehakiman di Mahkamah Tinggi Kuala Lumpur, menarik diri daripada mendengar perbicaraan kes itu atas alasan bahaya berat sebelah yang nyata.
+
+Kes itu difailkan di Mahkamah Tinggi Kuala Lumpur pada 30 Mei 2014, sebelum Hakim Besar Malaya, Tan Sri Zulkefli Ahmad Makinudin memerintahkan Kamaludin yang berpindah ke Mahkamah Tinggi Seremban awal lalu, mendengar kes berkenaan.</string>
+    <string name="checkin">Checkin</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_message_detail">Message_detail</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
+</resources>
