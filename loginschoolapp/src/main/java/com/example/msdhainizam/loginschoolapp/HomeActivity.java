@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         final ActionBar ab = this.getSupportActionBar();
-        mDrawerToggle.syncState();
+        //mDrawerToggle.syncState();
 
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -60,6 +60,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = setupDrawerToggle();
+        mDrawerToggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null) {

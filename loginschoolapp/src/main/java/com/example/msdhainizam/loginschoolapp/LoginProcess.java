@@ -75,7 +75,7 @@ public class LoginProcess {
         Intent intent = new Intent();
         intent.setClass(MyApplication.getAppContext(), HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        MyApplication.getAppContext().startActivity(intent);
     }
 
     private Response.Listener<String> createMyReqSuccessListener() {
