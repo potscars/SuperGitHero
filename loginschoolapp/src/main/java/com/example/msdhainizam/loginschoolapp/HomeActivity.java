@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         final ActionBar ab = this.getSupportActionBar();
+
         if(toolbar != null) {
             setSupportActionBar(toolbar);
 
