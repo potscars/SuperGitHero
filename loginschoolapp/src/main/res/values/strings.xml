@@ -31,5 +31,6 @@ Kes itu difailkan di Mahkamah Tinggi Kuala Lumpur pada 30 Mei 2014, sebelum Haki
     <string name="title_activity_message_detail">Message_detail</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+    <string name="superBoom">Boom!!!</string>
 
 </resources>
