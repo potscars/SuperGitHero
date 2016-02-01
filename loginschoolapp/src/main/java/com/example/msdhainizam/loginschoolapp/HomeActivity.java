@@ -46,8 +46,9 @@ public class HomeActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         final ActionBar ab = this.getSupportActionBar();
+        mDrawerToggle.syncState();
 
-        if(toolbar != null) {
+        if (toolbar != null) {
             setSupportActionBar(toolbar);
 
             if (ab != null) {
@@ -67,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             ListNavItemClicked(0);
         }
     }
@@ -88,8 +89,7 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private ActionBarDrawerToggle setupDrawerToggle()
-    {
+    private ActionBarDrawerToggle setupDrawerToggle() {
         return new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, mOpenDrawer, mCloseDrawer);
     }
 
@@ -105,8 +105,7 @@ public class HomeActivity extends AppCompatActivity {
                 });
     }
 
-    public void selectDrawerItem(MenuItem item)
-    {
+    public void selectDrawerItem(MenuItem item) {
         switch (item.getItemId()) {
 
             case R.id.nav_home:
@@ -136,7 +135,7 @@ public class HomeActivity extends AppCompatActivity {
                 fragment = new HomeFragment();
         }
 
-        if(fragment != null) {
+        if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame, fragment)
                     .commit();
