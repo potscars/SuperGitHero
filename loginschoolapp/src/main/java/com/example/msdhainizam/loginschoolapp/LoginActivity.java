@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -46,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.emailLogin);
         mPassword = (EditText) findViewById(R.id.passwordLogin);
         rememberMe = (CheckBox) findViewById(R.id.checkRememberMe);
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
