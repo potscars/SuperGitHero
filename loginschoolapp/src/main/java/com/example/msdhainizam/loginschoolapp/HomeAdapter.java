@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -23,9 +25,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolderData
     private ArrayList<Data> mDataList;
     private static MyClickListener myClickListener;
     private LayoutInflater mInflater;
+    private Context context;
+    private ImageLoader mImageLoader;
+    private VolleySingleTon volleySingleTon;
 
     public HomeAdapter(Context context) {
+        this.context = context;
         mInflater = LayoutInflater.from(context);
+        volleySingleTon = VolleySingleTon.getsInstance();
+        mImageLoader = volleySingleTon.getmImageLoader();
     }
 
     public void setData(ArrayList<Data> mDataList) {
@@ -34,7 +42,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolderData
     }
 
     public ViewHolderData onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.announce_itemlist, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.announcement_itemlist, parent, false);
         ViewHolderData dataObjectHolder = new ViewHolderData(view);
         return dataObjectHolder;
     }
@@ -44,7 +52,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolderData
 
         holder.mTitle.setText(mDataList.get(position).getTitle());
         holder.mContent.setText(mDataList.get(position).getContent());
-        holder.mCircleImageView.setImageResource(mDataList.get(position).getSchoolImage());
+
+        //take the url string and pass to loadimages method
+        String urlImage = mDataList.get(position).getSchoolImage();
+        loadImages(urlImage, holder);
 
         Glide.with(holder.mCircleImageView.getContext())
                 .load(mDataList.get(position).getSchoolImage())
@@ -54,11 +65,32 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolderData
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context context = v.getContext();
-                Intent intent = new Intent(context, Message_detail.class);
-                context.startActivity(intent);
+                AnnouncementDetailFragment announcementDetailFragment =
+                        new AnnouncementDetailFragment();
+                ((HomeActivity)context).getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame, announcementDetailFragment)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
+    }
+
+    private void loadImages(String urlImage, final ViewHolderData holder) {
+        if(!urlImage.equals("Nothing available") && !urlImage.isEmpty()) {
+            mImageLoader.get(urlImage, new ImageLoader.ImageListener() {
+                @Override
+                public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
+                    holder.mCircleImageView.setImageBitmap(response.getBitmap());
+                }
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            });
+        } else {
+            holder.mCircleImageView.setImageResource(R.drawable.yui_small2);
+        }
     }
 
     public void addItem(Data dataObj, int index) {

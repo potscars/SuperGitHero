@@ -22,7 +22,7 @@ public class Data implements Parcelable {
     private String title;
     private String content;
     private String schoolName;
-    private int schoolImage;
+    private String schoolImage;
 
     public Data() { }
 
@@ -30,13 +30,13 @@ public class Data implements Parcelable {
         title = input.readString();
         content = input.readString();
         schoolName = input.readString();
-        schoolImage = input.readInt();
+        schoolImage = input.readString();
     }
 
     public Data(String title,
                 String content,
                 String schoolName,
-                int schoolImage) {
+                String schoolImage) {
         this.title = title;
         this.content = content;
         this.schoolName = schoolName;
@@ -68,11 +68,11 @@ public class Data implements Parcelable {
         return schoolName;
     }
 
-    public void setSchoolImage(int schoolImage) {
+    public void setSchoolImage(String schoolImage) {
         this.schoolImage = schoolImage;
     }
 
-    public int getSchoolImage() {
+    public String getSchoolImage() {
         return schoolImage;
     }
 
@@ -94,6 +94,6 @@ public class Data implements Parcelable {
         dest.writeString(title);
         dest.writeString(content);
         dest.writeString(schoolName);
-        dest.writeInt(schoolImage);
+        dest.writeString(schoolImage);
     }
 }

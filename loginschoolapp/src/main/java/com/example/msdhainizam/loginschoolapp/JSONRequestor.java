@@ -17,9 +17,9 @@ import java.util.concurrent.TimeoutException;
 /**
  * Created by IGWMobileTeam on 29/01/2016.
  */
-public class AnnouncementRequestor {
+public class JSONRequestor {
 
-    public static JSONObject requestAnnouncementJSON(RequestQueue requestQueue) {
+    public static JSONObject requestJSONObject(RequestQueue requestQueue, String url) {
         String token = MyApplication.readTokenFromPreferences();
         Log.d("Token", token);
 
@@ -30,7 +30,7 @@ public class AnnouncementRequestor {
         RequestFuture<JSONObject> requestFuture = RequestFuture.newFuture();
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
-                UrlExtras.URL_ANNOUNCEMENT,
+                url,
                 new JSONObject(params),
                 requestFuture,
                 requestFuture);
@@ -38,6 +38,37 @@ public class AnnouncementRequestor {
         requestQueue.add(request);
         try {
             response = requestFuture.get(10000, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
+
+        return response;
+    }
+
+    public static JSONObject requestJSONObject(RequestQueue requestQueue, String url, String icNumber) {
+        String token = MyApplication.readTokenFromPreferences();
+        Log.d("Token", token);
+
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("tokens", token);
+        params.put("ic_no", icNumber);
+
+        JSONObject response = null;
+        RequestFuture<JSONObject> requestFuture = RequestFuture.newFuture();
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST,
+                url,
+                new JSONObject(params),
+                requestFuture,
+                requestFuture);
+
+        requestQueue.add(request);
+        try {
+            response = requestFuture.get(3000, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

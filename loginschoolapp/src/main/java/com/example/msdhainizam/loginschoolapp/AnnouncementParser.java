@@ -13,6 +13,11 @@ import java.util.ArrayList;
  */
 public class AnnouncementParser {
 
+    public static final String KEY_DOCUMENTS = "documents";
+    public static final String KEY_IMAGEPATH = "path";
+    public static final String KEY_IMAGENAME = "name";
+    public static final String KEY_FILETYPE = "filetype";
+
     public static ArrayList<Data> parseAnnounceJSON(JSONObject response) {
 
         ArrayList<Data> listAnnounceData = new ArrayList<>();
@@ -30,6 +35,7 @@ public class AnnouncementParser {
 
                     String title = "Nothing available.";
                     String content = "Nothing available.";
+                    String imageURL = "Nothing available";
 
                     for (int i = 0; i < arrayData.length(); i++) {
 
@@ -39,11 +45,28 @@ public class AnnouncementParser {
                         title = currentData.getString("title");
                         content = currentData.getString("text");
 
+                        if(JSONUtils.contains(currentData, KEY_DOCUMENTS)) {
+                            JSONArray docArray = currentData.getJSONArray(KEY_DOCUMENTS);
+
+                            for(int j = 0; j < docArray.length(); j++) {
+
+                                imageURL = response.getString("image_url_path");
+
+                                JSONObject docArrayData = docArray.getJSONObject(j);
+
+                                String imagePath = docArrayData.getString(KEY_IMAGEPATH);
+                                String imageName = docArrayData.getString(KEY_IMAGENAME);
+                                String imageType = docArrayData.getString(KEY_FILETYPE);
+
+                                imageURL += imagePath + imageName + "." + imageType;
+                            }
+                        }
+
                         Data data = new Data();
                         data.setTitle(title);
                         data.setContent(content);
                         data.setSchoolName("Sekolah Kebangsaan Jerantut");
-                        data.setSchoolImage(R.drawable.yui_small4);
+                        data.setSchoolImage(imageURL);
 
                         listAnnounceData.add(data);
                     }
@@ -53,7 +76,7 @@ public class AnnouncementParser {
                     data.setTitle("Error");
                     data.setContent("Error");
                     data.setSchoolName("Error");
-                    data.setSchoolImage(R.drawable.ic_mail_black_24dp);
+                    data.setSchoolImage("Nothing available");
                     listAnnounceData.add(data);
                 }
             } catch (JSONException e) {

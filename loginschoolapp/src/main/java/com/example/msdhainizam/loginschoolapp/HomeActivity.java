@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -112,7 +113,9 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.nav_home:
                 ListNavItemClicked(0);
                 break;
-
+            case R.id.nav_profile:
+                ListNavItemClicked(1);
+                break;
             case R.id.logOut:
                 clearPreferences();
                 break;
@@ -134,11 +137,16 @@ public class HomeActivity extends AppCompatActivity {
         switch (position) {
             case 0:
                 fragment = new HomeFragment();
+                break;
+            case 1:
+                fragment = new ProfileFragment();
+                break;
         }
 
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame, fragment)
+                    .addToBackStack(null)
                     .commit();
         }
     }
@@ -146,7 +154,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onPostCreate(savedInstanceState, persistentState);
-
         mDrawerToggle.syncState();
     }
 
@@ -155,5 +162,18 @@ public class HomeActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
 
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        FragmentManager fm = getSupportFragmentManager();
+        int count = fm.getBackStackEntryCount();
+
+        if(count == 1) {
+            super.onBackPressed();
+        } else {
+            fm.popBackStack();
+        }
     }
 }

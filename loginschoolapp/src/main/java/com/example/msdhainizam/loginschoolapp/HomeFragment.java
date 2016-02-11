@@ -72,11 +72,15 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         if(savedInstanceState != null) {
             mDataList = savedInstanceState.getParcelableArrayList(PARCEL_DATA);
         }else {
-            new TaskLoadAnnouncement(this).execute();
+
+            mDataList = MyApplication.getWritableDatabase().readAnnouncement();
+
+            if (mDataList.isEmpty()) {
+                new TaskLoadAnnouncement(this).execute();
+            }
         }
 
         mAdapter.setData(mDataList);
-
         return view;
     }
 

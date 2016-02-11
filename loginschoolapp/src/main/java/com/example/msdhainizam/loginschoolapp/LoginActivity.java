@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             MyApplication.saveToSharedPreferences(emailInput, passwordInput, true);
         }
 
-        new TaskLoginActivity(emailInput, passwordInput, getIMEI()).execute();
+        new TaskLoginActivity(this, emailInput, passwordInput, getIMEI()).execute();
     }
 
     public void fireRegister(){

@@ -1,5 +1,6 @@
 package com.example.msdhainizam.loginschoolapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class LoginProcess {
     public static final String KEY_APP = "app";
 
     private Context context;
+    private Activity activity;
     private String mEmail;
     private String mPassword;
     private String mIMEI;
@@ -35,11 +37,12 @@ public class LoginProcess {
     private RequestQueue requestQueue;
     public static String URL_LOGIN = "http://schoolapp.myapp.my/api/user/login";
 
-    public LoginProcess(String email, String password, String imei, String app, RequestQueue requestQueue) {
+    public LoginProcess(Activity activity, String email, String password, String imei, String app, RequestQueue requestQueue) {
         mEmail = email;
         mPassword = password;
         mIMEI = imei;
         mApp = app;
+        this.activity = activity;
         this.requestQueue = requestQueue;
         context = MyApplication.getAppContext();
     }
@@ -75,7 +78,8 @@ public class LoginProcess {
         Intent intent = new Intent();
         intent.setClass(MyApplication.getAppContext(), HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        MyApplication.getAppContext().startActivity(intent);
+        context.startActivity(intent);
+        activity.finish();
     }
 
     private Response.Listener<String> createMyReqSuccessListener() {

@@ -18,6 +18,8 @@ public class MyApplication extends Application {
     public static SharedPreferences.Editor prefEditor;
     public static SharedPreferences preferences;
 
+    private static DBAnnouncement mDatabase;
+
     private static MyApplication mInstance;
 
     public static MyApplication getInstance() {
@@ -32,6 +34,15 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        mDatabase = new DBAnnouncement(this);
+    }
+
+    public synchronized static DBAnnouncement getWritableDatabase() {
+        if (mDatabase == null) {
+            mDatabase = new DBAnnouncement(getAppContext());
+        }
+
+        return mDatabase;
     }
 
     public static void saveToSharedPreferences(String token) {

@@ -28,7 +28,6 @@
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
@@ -55,8 +54,6 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin"/>
 
-
-
         </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -67,53 +64,10 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:orientation="horizontal">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/messageDetail_imageView"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginRight="16dp"
-                        android:scaleType="centerCrop" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_toEndOf="@+id/messageDetail_imageView"
-                        android:layout_toRightOf="@+id/messageDetail_imageView"
-                        android:text="Kem Motivasi Angkat Tangan"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:fontFamily="sans-serif"
-                        android:textColor="#212121" />
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/textView3"
-                        android:layout_alignStart="@+id/textView3"
-                        android:layout_below="@+id/textView3"
-                        android:text="Sekolah kktanpiya"
-                        android:fontFamily="sans-serif-light"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-                </RelativeLayout>
-            </LinearLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -126,6 +80,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/detailTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Kem Motivasi Angkat Tangan"
@@ -135,6 +90,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/detailContent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/message"
@@ -146,11 +102,6 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
-
         </LinearLayout>
-
     </android.support.v4.widget.NestedScrollView>
-
-
 </android.support.design.widget.CoordinatorLayout>
