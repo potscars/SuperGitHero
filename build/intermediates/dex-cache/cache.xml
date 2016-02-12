@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
+        jar="/Users/IGWMobileTeam/Library/Developer/Xamarin/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-47a94be805d76881d34212b0c4af116cf3be9748.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/library-2.4.0-379ec06717928954cce943e2ed4c676dbf1f0777.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-ae9e9672694e1b1407f08d0c1d8f1585a4c45609.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/library-1.0.19-0c5f47cb7d0eb484c4f8a884fbf33a9867c15fb0.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-d91ebc324a975d3c2098d554b9f3da7556fee007.jar" />
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-9a306b306be1471b75ab0b09ff71d7532083f4c6.jar" />
     </item>
     <item
         jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/jp.wasabeef/recyclerview-animators/2.1.0/jars/classes.jar"
@@ -44,60 +16,11 @@
         <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-7a20d63c4b48f3a14c282d41076f673ab19d40bc.jar" />
     </item>
     <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.1.3/jars/classes.jar"
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="b7a78990c10481f43cb4909f535ef4f11e60f1ab">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-d8d0892716cf46fea3dd540a1e46e3038833ee04.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2b1fb39b3c4feeb031b00744fbbe464e3d31a88d">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-17ff462c389bfbfed41b9764a3d256eed430f679.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.github.florent37/app/1.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="05bc13a6f1fc1d0a33c557925ec1dcd81fd34f56">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-137a419b83ccd29ee26f81fd69e249919c210513.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-b0535c7eae1544d1c290e42117fb8356c3cb0567.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-4a2334affa877cacdf0494a8423c0c657a27fb4a.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-bf24806a347893ba88349b5ce229ce5e61e5acec.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/info.hoang8f/fbutton/1.0.5/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="2c12397a785c3b1868fbebeffc9553457b27803f">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-b23ece18d8f1e72f9bfd0c5d8f4e8df0f9309af9.jar" />
-    </item>
-    <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.github.traex.rippleeffect/library/1.3/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="ee17feb34ce104bc17d1a1e64346d7f779ebb066">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-1ee6427a5e89a6305ff5ea4eff38319c595759d3.jar" />
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-ae9e9672694e1b1407f08d0c1d8f1585a4c45609.jar" />
     </item>
     <item
         jar="/Users/IGWMobileTeam/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
@@ -107,18 +30,81 @@
         <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/glide-3.6.0-cb302490798cd1a8b46ea6731e703c0f03ac1f99.jar" />
     </item>
     <item
-        jar="/Users/IGWMobileTeam/Library/Developer/Xamarin/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.4/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-9a306b306be1471b75ab0b09ff71d7532083f4c6.jar" />
+        sha1="467417b1695583fbaee8de0e5f4202b6a2b578e1">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-e764375a91c2df3095ec71b0d4917abb22e09072.jar" />
     </item>
     <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.1/jars/classes.jar"
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.github.traex.rippleeffect/library/1.3/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="441ace5a20e7fcf94f30b4394d882ed2f79237c3">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-c066664369c55cf494b664445a188c49808874a3.jar" />
+        sha1="ee17feb34ce104bc17d1a1e64346d7f779ebb066">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-1ee6427a5e89a6305ff5ea4eff38319c595759d3.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/library-1.0.19-0c5f47cb7d0eb484c4f8a884fbf33a9867c15fb0.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-bf24806a347893ba88349b5ce229ce5e61e5acec.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.1.3/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="b7a78990c10481f43cb4909f535ef4f11e60f1ab">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-d8d0892716cf46fea3dd540a1e46e3038833ee04.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-b0535c7eae1544d1c290e42117fb8356c3cb0567.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.github.florent37/app/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="05bc13a6f1fc1d0a33c557925ec1dcd81fd34f56">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-137a419b83ccd29ee26f81fd69e249919c210513.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-4a2334affa877cacdf0494a8423c0c657a27fb4a.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/library-2.4.0-379ec06717928954cce943e2ed4c676dbf1f0777.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-d91ebc324a975d3c2098d554b9f3da7556fee007.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-47a94be805d76881d34212b0c4af116cf3be9748.jar" />
     </item>
     <item
         jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
@@ -135,11 +121,11 @@
         <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-af2cc0384caf226d5d20c9e8fe0058f0af33b388.jar" />
     </item>
     <item
-        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.4/jars/classes.jar"
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.5.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0"
-        sha1="467417b1695583fbaee8de0e5f4202b6a2b578e1">
-        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-e764375a91c2df3095ec71b0d4917abb22e09072.jar" />
+        sha1="2b1fb39b3c4feeb031b00744fbbe464e3d31a88d">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-17ff462c389bfbfed41b9764a3d256eed430f679.jar" />
     </item>
     <item
         jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.5/jars/classes.jar"
@@ -147,6 +133,20 @@
         revision="23.0.0"
         sha1="6e65060ef2ec6ec98365250d2119d7968626fd3f">
         <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-182e84904c0f5c861af13e38a3fdc4425a2974d7.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="441ace5a20e7fcf94f30b4394d882ed2f79237c3">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-c066664369c55cf494b664445a188c49808874a3.jar" />
+    </item>
+    <item
+        jar="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/exploded-aar/info.hoang8f/fbutton/1.0.5/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="2c12397a785c3b1868fbebeffc9553457b27803f">
+        <dex dex="/Users/IGWMobileTeam/AndroidStudioProjects/SuperGitHero/loginschoolapp/build/intermediates/pre-dexed/debug/classes-b23ece18d8f1e72f9bfd0c5d8f4e8df0f9309af9.jar" />
     </item>
 
 </items>
