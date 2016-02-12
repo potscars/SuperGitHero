@@ -10,7 +10,8 @@ public class GuardianData {
     private String name;
     private String email;
     private String phoneNumber;
-    private ArrayList<String> childData;
+    private ArrayList<String> childName;
+    private ArrayList<String> childICNumber;
 
     public GuardianData() {
 
@@ -19,11 +20,13 @@ public class GuardianData {
     public GuardianData(String name,
                        String email,
                        String phoneNumber,
-                        ArrayList<String> childData) {
+                        ArrayList<String> childName,
+                        ArrayList<String> childICNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.childData = childData;
+        this.childName = childName;
+        this.childICNumber = childICNumber;
     }
 
     public void setName(String name) {
@@ -50,12 +53,20 @@ public class GuardianData {
         return phoneNumber;
     }
 
-    public void setChildData(ArrayList<String> childData) {
-        this.childData = childData;
+    public void setChildName(ArrayList<String> childName) {
+        this.childName = childName;
     }
 
-    public ArrayList<String> getChildData() {
-        return childData;
+    public ArrayList<String> getChildName() {
+        return childName;
+    }
+
+    public void setChildICNumber(ArrayList<String> childICNumber) {
+        this.childICNumber = childICNumber;
+    }
+
+    public ArrayList<String> getChildICNumber() {
+        return childICNumber;
     }
 
     @Override

@@ -27,4 +27,6 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="colorIcons">#FFFFFF</color>
     <color name="colorDivider">#B6B6B6</color>
+    <color name="profileBackground">#F5F5F5</color>
+    <color name="whiteColor">#FFFFFF</color>
 </resources>

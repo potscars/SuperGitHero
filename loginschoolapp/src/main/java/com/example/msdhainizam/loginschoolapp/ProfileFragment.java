@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,7 @@ public class ProfileFragment extends Fragment implements OnProfileDataLoaded {
         name = (TextView) view.findViewById(R.id.tvNameContent);
         email = (TextView) view.findViewById(R.id.tvEmailContent);
         phone = (TextView) view.findViewById(R.id.tvPhoneContent);
-        childContent = (TextView) view.findViewById(R.id.tvChildrenContent);
+        //childContent = (TextView) view.findViewById(R.id.tvChildrenContent);
         addChildButton = (Button) view.findViewById(R.id.buttonAddChild);
         fm = getActivity().getSupportFragmentManager();
 
@@ -74,15 +75,29 @@ public class ProfileFragment extends Fragment implements OnProfileDataLoaded {
         phone.setText(profileData.getPhoneNumber());
 
         String child = "";
-        ArrayList<String> childArray = profileData.getChildData();
-        if(!childArray.isEmpty()) {
-            for (int i = 0; i < childArray.size(); i++) {
-                child += childArray.get(i);
+        ArrayList<String> childName = profileData.getChildName();
+        ArrayList<String> childIC = profileData.getChildICNumber();
+        if(!childName.isEmpty()) {
+            for (int i = 0; i < childName.size(); i++) {
+                addChildTextView(childName.get(i), childIC.get(i));
             }
-            childContent.setText(child);
         } else {
-            childContent.setText("No children available");
+            addChildTextView("NA", "NA");
         }
+    }
+
+    private void addChildTextView(String name, String icNumber) {
+
+        LinearLayout linearLayout = (LinearLayout) getView().findViewById(R.id.layoutAddChild);
+        TextView tvName = new TextView(getActivity());
+        TextView tvICNumber = new TextView(getActivity());
+        tvName.setText(name);
+        tvName.setPadding(5, 0, 5, 0);
+        tvICNumber.setText(icNumber);
+        tvICNumber.setPadding(5,0,5,0);
+
+        linearLayout.addView(tvName);
+        linearLayout.addView(tvICNumber);
     }
 
     @Override

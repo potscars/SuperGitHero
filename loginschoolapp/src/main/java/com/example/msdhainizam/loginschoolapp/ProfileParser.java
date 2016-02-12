@@ -37,7 +37,8 @@ public class ProfileParser {
                 String childrenIC = NA;
                 String childrenSchool = NA;
                 String childForArray = NA;
-                ArrayList<String> childData = new ArrayList<>();
+                ArrayList<String> childName = new ArrayList<>();
+                ArrayList<String> childIC = new ArrayList<>();
 
                 if (status == 1) {
 
@@ -71,7 +72,8 @@ public class ProfileParser {
                                 "\n" + childrenIC;
 
                                 Log.d("Child data", childrenName + " " + childrenIC);
-                                childData.add(childForArray);
+                                childName.add(childrenName);
+                                childIC.add(childrenIC);
                             }
                         }
                     }
@@ -81,7 +83,8 @@ public class ProfileParser {
                     profileData.setName(name);
                     profileData.setEmail(email);
                     profileData.setPhoneNumber(phoneNumber);
-                    profileData.setChildData(childData);
+                    profileData.setChildName(childName);
+                    profileData.setChildICNumber(childIC);
 
                 }else {
                     profileData.setName(name);

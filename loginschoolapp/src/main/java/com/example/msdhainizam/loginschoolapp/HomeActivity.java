@@ -1,5 +1,7 @@
 package com.example.msdhainizam.loginschoolapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -167,13 +169,31 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         FragmentManager fm = getSupportFragmentManager();
         int count = fm.getBackStackEntryCount();
 
         if(count == 1) {
-            super.onBackPressed();
+            alertDialog.setTitle("Exiting App..");
+            alertDialog.setMessage("Are sure want to exit?");
+            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //super.onBackPressed();
+                    HomeActivity.this.onBackPressed();
+                    HomeActivity.this.finish();
+                }
+            });
+            alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            alertDialog.show();
+            //finish();
         } else {
-            fm.popBackStack();
+            getSupportFragmentManager().popBackStack();
         }
     }
 }
