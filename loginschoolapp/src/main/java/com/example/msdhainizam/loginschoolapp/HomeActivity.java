@@ -2,6 +2,7 @@ package com.example.msdhainizam.loginschoolapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -129,6 +130,9 @@ public class HomeActivity extends AppCompatActivity {
     public void clearPreferences() {
         preferences = getSharedPreferences(MyApplication.PREFS_NAME, 0);
         preferences.edit().clear().apply();
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
         finish();
     }
 

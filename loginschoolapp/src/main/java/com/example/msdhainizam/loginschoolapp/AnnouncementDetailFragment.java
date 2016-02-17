@@ -20,12 +20,29 @@ import com.bumptech.glide.Glide;
  */
 public class AnnouncementDetailFragment extends Fragment {
 
+    private String mTitle, mContent, mUrlImage;
     private ImageView imageHeader;
     private TextView detailTitle, detailContent;
     private CollapsingToolbarLayout collapsingToolbarLayout;
 
     public AnnouncementDetailFragment() {
         setRetainInstance(true);
+    }
+
+    public static AnnouncementDetailFragment newInstance(String title, String content, String bitmap) {
+
+        Bundle args = new Bundle();
+
+        /*ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+        byte[] bytes = stream.toByteArray();*/
+
+        AnnouncementDetailFragment fragment = new AnnouncementDetailFragment();
+        args.putString("title", title);
+        args.putString("content", content);
+        args.putString("bitmapUrl", bitmap);
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Nullable
@@ -47,7 +64,14 @@ public class AnnouncementDetailFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Glide.with(this).load(R.drawable.yui_small2).into(imageHeader);
+        mTitle = getArguments().getString("title");
+        mContent = getArguments().getString("content");
+        mUrlImage = getArguments().getString("bitmapUrl");
+
+        Glide.with(this).load(mUrlImage)
+                .thumbnail(0.25f)
+                .error(R.drawable.no_image_available)
+                .into(imageHeader);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout)
                 view.findViewById(R.id.collapsing_toolbar);

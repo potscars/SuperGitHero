@@ -17,6 +17,7 @@ public class AnnouncementParser {
     public static final String KEY_IMAGEPATH = "path";
     public static final String KEY_IMAGENAME = "name";
     public static final String KEY_FILETYPE = "filetype";
+    public static  final String KEY_ANNOUNCEMENT = "annoucement";
 
     public static ArrayList<Data> parseAnnounceJSON(JSONObject response) {
 
@@ -25,63 +26,70 @@ public class AnnouncementParser {
 
             try {
 
-
+                String title = "Nothing available.";
+                String content = "Nothing available.";
+                String imageURL = "Nothing available";
+                String schoolName = "Nothing available";
                 int status = response.getInt("status");
 
-                if(status == 1) {
+                if (status == 1) {
 
                     JSONObject announcement = response.getJSONObject("annoucements");
                     JSONArray arrayData = announcement.getJSONArray("data");
 
-                    String title = "Nothing available.";
-                    String content = "Nothing available.";
-                    String imageURL = "Nothing available";
-
                     for (int i = 0; i < arrayData.length(); i++) {
 
                         JSONObject announceData = arrayData.getJSONObject(i);
-                        JSONObject currentData = announceData.getJSONObject("annoucement");
 
-                        title = currentData.getString("title");
-                        content = currentData.getString("text");
+                        if (JSONUtils.contains(announceData, KEY_ANNOUNCEMENT)) {
+                            JSONObject currentData = announceData.getJSONObject("annoucement");
 
-                        if(JSONUtils.contains(currentData, KEY_DOCUMENTS)) {
-                            JSONArray docArray = currentData.getJSONArray(KEY_DOCUMENTS);
+                            title = currentData.getString("title");
+                            content = currentData.getString("text");
 
-                            for(int j = 0; j < docArray.length(); j++) {
+                            if (JSONUtils.contains(currentData, KEY_DOCUMENTS)) {
+                                JSONArray docArray = currentData.getJSONArray(KEY_DOCUMENTS);
 
-                                imageURL = response.getString("image_url_path");
+                                if (docArray != null && docArray.length() > 0) {
 
-                                JSONObject docArrayData = docArray.getJSONObject(j);
+                                    for (int j = 0; j < docArray.length(); j++) {
 
-                                String imagePath = docArrayData.getString(KEY_IMAGEPATH);
-                                String imageName = docArrayData.getString(KEY_IMAGENAME);
-                                String imageType = docArrayData.getString(KEY_FILETYPE);
+                                        imageURL = response.getString("image_url_path");
 
-                                imageURL += imagePath + imageName + "." + imageType;
+                                        JSONObject docArrayData = docArray.getJSONObject(j);
+
+                                        String imagePath = docArrayData.getString(KEY_IMAGEPATH);
+                                        String imageName = docArrayData.getString(KEY_IMAGENAME);
+                                        String imageType = docArrayData.getString(KEY_FILETYPE);
+
+                                        imageURL += imagePath + imageName + "." + imageType;
+                                    }
+                                }else {
+                                    Log.d("docArray: ", "isEmpty");
+                                }
                             }
                         }
 
-                        Data data = new Data();
-                        data.setTitle(title);
-                        data.setContent(content);
-                        data.setSchoolName("Sekolah Kebangsaan Jerantut");
-                        data.setSchoolImage(imageURL);
+                            Data data = new Data();
+                            data.setTitle(title);
+                            data.setContent(content);
+                            data.setSchoolName(schoolName);
+                            data.setSchoolImage(imageURL);
 
+                            listAnnounceData.add(data);
+                        }
+                    }else{
+
+                        Data data = new Data();
+                        data.setTitle("Error");
+                        data.setContent("Error");
+                        data.setSchoolName("Error");
+                        data.setSchoolImage("Nothing available");
                         listAnnounceData.add(data);
                     }
-                }else{
-
-                    Data data = new Data();
-                    data.setTitle("Error");
-                    data.setContent("Error");
-                    data.setSchoolName("Error");
-                    data.setSchoolImage("Nothing available");
-                    listAnnounceData.add(data);
+                }catch(JSONException e){
+                    Log.d("JSONException ", e.toString());
                 }
-            } catch (JSONException e) {
-                Log.d("JSONException ", e.toString());
-            }
 
         }
 

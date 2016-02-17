@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
@@ -50,23 +51,29 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolderData
     @Override
     public void onBindViewHolder(ViewHolderData holder, int position) {
 
+        final String title = mDataList.get(position).getTitle();
+        final String content = mDataList.get(position).getContent();
+        final String urlImage = mDataList.get(position).getSchoolImage();
+
         holder.mTitle.setText(mDataList.get(position).getTitle());
         holder.mContent.setText(mDataList.get(position).getContent());
 
         //take the url string and pass to loadimages method
-        String urlImage = mDataList.get(position).getSchoolImage();
-        loadImages(urlImage, holder);
+        //loadImages(urlImage, holder);
 
         Glide.with(holder.mCircleImageView.getContext())
-                .load(mDataList.get(position).getSchoolImage())
+                .load(urlImage)
+                .error(R.drawable.no_image_available)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .fitCenter()
+                .centerCrop()
                 .into(holder.mCircleImageView);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AnnouncementDetailFragment announcementDetailFragment =
-                        new AnnouncementDetailFragment();
+                        new AnnouncementDetailFragment().newInstance(title, content, urlImage);
                 ((HomeActivity)context).getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame, announcementDetailFragment)
                         .addToBackStack(null)
